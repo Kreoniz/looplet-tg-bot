@@ -4,7 +4,9 @@ services:
     env_file:
       - .env
     volumes:
-      - ./data:/app/data
+      - looplet-data:/app/data
     restart: unless-stopped
     init: true
 
+volumes:
+  looplet-data:

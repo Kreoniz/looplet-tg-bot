@@ -72,7 +72,14 @@ docker compose up -d --build
 docker compose logs -f
 ```
 
-The compose file mounts `./data` into the container so reminders survive restarts.
+The compose file uses a Docker-managed volume named `looplet-data` so reminders survive restarts without host directory permission setup.
+
+If you prefer a visible host directory instead, change the volume to `./data:/app/data` and make it writable by the container user:
+
+```bash
+mkdir -p data
+sudo chown -R 10001:10001 data
+```
 
 Update later with:
 
