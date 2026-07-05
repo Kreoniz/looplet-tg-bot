@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-loop-made-this-bot"
+version = "0.1.0"
+description = "Looplet, a small-group Telegram bot for reminders, weather, jokes, comics, and dice."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Looplet Maintainers" }]
+dependencies = [
+    "httpx>=0.27,<1",
+    "python-telegram-bot[job-queue]>=21.0,<23.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+looplet = "looplet.bot:main"
+
+[tool.setuptools.packages.find]
+include = ["looplet*"]
+
+[tool.setuptools.package-data]
+"looplet.data" = ["quotes.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
