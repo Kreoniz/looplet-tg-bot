@@ -3,7 +3,7 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "agent-loop-made-this-bot"
+name = "looplet-tg-bot"
 version = "0.1.0"
 description = "Looplet, a small-group Telegram bot for reminders, weather, jokes, comics, and dice."
 readme = "README.md"
@@ -37,4 +37,3 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-

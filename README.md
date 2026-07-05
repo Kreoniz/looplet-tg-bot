@@ -64,8 +64,8 @@ pytest
 On the VPS:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/agent-loop-made-this-bot.git
-cd agent-loop-made-this-bot
+git clone https://github.com/YOUR_USERNAME/looplet-tg-bot.git
+cd looplet-tg-bot
 cp .env.example .env
 nano .env
 docker compose up -d --build
@@ -86,7 +86,7 @@ docker compose up -d --build
 If GitHub CLI is authenticated, the repo can be created with:
 
 ```bash
-gh repo create agent-loop-made-this-bot --private --source=. --remote=origin --push
+gh repo create looplet-tg-bot --private --source=. --remote=origin --push
 ```
 
 Without GitHub CLI, initialize and push manually:
@@ -96,7 +96,7 @@ git init
 git add .
 git commit -m "Initial Looplet bot"
 git branch -M main
-git remote add origin git@github.com:YOUR_USERNAME/agent-loop-made-this-bot.git
+git remote add origin git@github.com:YOUR_USERNAME/looplet-tg-bot.git
 git push -u origin main
 ```
 
